@@ -1,0 +1,25 @@
+spring:
+  security:
+      oauth2:
+        client:
+          registration:
+            google:
+              clientId: 442422486515-6dv9sdc72hm1i28t8a0h1i18ngiuealv.apps.googleusercontent.com
+              clientSecret: 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
+              redirectUri: http://localhost:8080/oauth2/callback/google
+              scope:
+                - email
+                - profile
+               
+app:
+  auth:
+    tokenSecret: NTNv7j0TuYARvmNMmWXo6fKvM4o6nv/aUi9ryX38ZH+L1bkrnD1ObOQ8JAUmHCBq7Iy7otZcyAagBLHVKvvYaIpmMuxmARQ97jUVG16Jkpkp1wXOPsrF9zwew6TpczyHkHgX5EuLg2MeBuiT/qJACs1J0apruOOJCg/gOtkjB4c=
+    tokenExpirationMsec: 86400000
+  oauth2:
+    # After successfully authenticating with the OAuth2 Provider,
+    # we'll be generating an auth token for the user and sending the token to the
+    # redirectUri mentioned by the client in the /oauth2/authorize request.
+    authorizedRedirectUris:
+      - http://localhost:3000/oauth2/redirect
+ 
+    
