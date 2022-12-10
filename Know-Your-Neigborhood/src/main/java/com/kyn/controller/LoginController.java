@@ -47,6 +47,7 @@ public class LoginController {
 		// pass the token and token type
 		// ok status mean 200 HTTP status
 		return ResponseEntity.ok(new AfterLogin(token));
+		
 	}
 
 }
