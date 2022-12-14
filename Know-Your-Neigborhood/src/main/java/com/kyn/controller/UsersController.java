@@ -21,5 +21,6 @@ public class UsersController {
 	public Users getUser(@CurrentUser UsersPrincipal usersPrincipal) {
 	   return usersRepo.findById((usersPrincipal.getUsersId())) 
 	                .orElseThrow(() -> new ResourceNotFoundException("Users", "userId", usersPrincipal.getUsersId()));
+	   
 	}
 }
